@@ -4,22 +4,22 @@ cask "builder" do
 
   on_macos do
     on_intel do
-      sha256 "795951883f5c4df76d96bcf558d62de7f310e82ff6f806b3e58dc3ba7625fb68"
+      sha256 "071235bcc4a4c2d7f0c28a09d4854ba4031b2c408668fb8fcb4b7de026bff099"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/builder_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "fb77c3d0c48f4ea42205542a5aad7848aad5417ce1593523eacc214e09a16e75"
+      sha256 "7c849dd3f2a9873bc51956e32a5664594025295662c0d534a8f1c987b9aff7b5"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/builder_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "5121a56829928a8b98f5b9c426248446589dcc7eb54b0c82dba62250642fd2dc"
+      sha256 "f4c1e102b31c30e79a50b5d6223e625eec4c656487f4163b3c80b19a77ab9fbb"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/builder_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "f25fa16376e06f0ba3db94b14e03fbe3be048eca4356068d45cb2b8b80489e07"
+      sha256 "8a33aec1d513c45174dfd77167121af11dadbea43cd72f5ce4171653403c4f3f"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/builder_#{version}_linux_arm64.tar.gz"
     end
   end
