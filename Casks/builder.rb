@@ -4,21 +4,21 @@ cask "builder" do
 
   on_macos do
     on_arm do
-      sha256 "b6a9b88c0ad135c236a09a0718b807ad6bd7c1b2da47de2fd0ae0c58fada9ced"
+      sha256 "00aaf0581a41e9206310ec2f33ba30d62441b2b30221a60e32e0dd69c6adddf1"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/sparkles_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "ca277b64c1ea3a76e8d1a8bc5096c07f2a80861f43c0643f53a158bb24abbb85"
+      sha256 "5f52242599a5600c5cecf726be43ae0a033c706c08193664d95a75be22edbbc5"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/sparkles_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "7b91a1a5393067a02fcd8d2e6e722ca1d276918286e02ec87d00dd151dbb0eb6"
+      sha256 "4715a6c4aabb6137f8bc376a54ca157d875509cf3514390a2c024880fa874722"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/sparkles_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "c9992a240061bd74360d58034d0e9157709f4d0c553c089c800ca8d597e94d44"
+      sha256 "754c040f4e215ffa63ad9c71f4498356f25d7ec51e434b8a17e72adb08cf12ce"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/sparkles_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -34,8 +34,8 @@ cask "builder" do
   binary "sparkles"
 
   postflight_steps do
-    run "/usr/bin/mv", args: ["#{staged_path}/sparkles", "#{staged_path}/builder"]
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/builder"] if OS.mac?
+    run "/usr/bin/mv", args: ["#{staged_path}/sparkles", "#{cask.staged_path}"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{cask.staged_path}"] if OS.mac?
   end
 
   uninstall_postflight_steps do
