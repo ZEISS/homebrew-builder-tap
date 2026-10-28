@@ -34,6 +34,7 @@ cask "sparkles" do
   binary "sparkles"
 
   postflight_steps do
+    run "/usr/bin/mv", args: ["{{staged_path}/}sparkles", "{{staged_path}}/builder"]
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/sparkles"] if OS.mac?
   end
 
