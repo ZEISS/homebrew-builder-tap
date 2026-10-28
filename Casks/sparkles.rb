@@ -4,21 +4,21 @@ cask "sparkles" do
 
   on_macos do
     on_arm do
-      sha256 "4f4c6a7374d600bd0ff097438535133727f5d8a4936b6a4cc228ca7e76b17b1c"
+      sha256 "efcb1314160a06cea3e6bddf8da727d6d09f65aece316c1afc682fc5d6381eb5"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/sparkles_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "8fd95b97e45c66e9caa402529a212851f576d9ab651d07000b5942496220fad1"
+      sha256 "2c9f289df9ff8acc3d8d58f60aee2951507d46f0c661e8ba7c799c4496594266"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/sparkles_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "b2ea3b6f38d30ffa726a770442ab00d3ec57272e1534ec98704864b73d5d2b78"
+      sha256 "eee07cef7d1053e54a1ee2e4bea99cb03cb197abbfabfd688422c48d2fd55b83"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/sparkles_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "2422124eade811074be76305f759fd6cb91965671db969756ea665f29232a03e"
+      sha256 "241c081c890d145539083b23da4bf22dd131a59ec57d179c3165f8dfa160d2bb"
       url "https://github.com/zeiss/builder/releases/download/v#{version}/sparkles_#{version}_linux_amd64.tar.gz"
     end
   end
