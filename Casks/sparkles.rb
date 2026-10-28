@@ -34,7 +34,7 @@ cask "sparkles" do
   binary "sparkles"
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{cask.staged_path}"] if OS.mac?
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sparkles"] if OS.mac?
   end
 
   uninstall_postflight_steps do
