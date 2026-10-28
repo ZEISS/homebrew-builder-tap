@@ -34,8 +34,8 @@ cask "builder" do
   binary "sparkles"
 
   postflight_steps do
-    run "/usr/bin/mv", args: ["#{staged_path}/sparkles", "#{cask.staged_path}"]
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{cask.staged_path}"] if OS.mac?
+    run "/usr/bin/mv", args: ["#{staged_path}/sparkles", "#{staged_path}/builder"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/builder"] if OS.mac?
   end
 
   uninstall_postflight_steps do
